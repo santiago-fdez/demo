@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Widget</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"
+  />
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://widget-snowy.vercel.app/widget.umd.js"></script>
+</head>
+<body>
+  <div id="mi-widget"></div>
+
+
+  <script>
+    window.onload = () => {
+      if (window.MyWidget && typeof MyWidget.initWidget === 'function') {
+        MyWidget.initWidget(document.getElementById('mi-widget'), {
+          titulo:"Widget",
+          tema: "blanco",
+          nombreia: "Herrera"
+        });
+      } else {
+        console.error("❌ MyWidget o initWidget no está disponible");
+      }
+    };
+  </script>
+</body>
+</html>
