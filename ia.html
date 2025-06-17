@@ -66,11 +66,11 @@
     document.addEventListener("DOMContentLoaded", function () {
       const container = document.getElementById('mi-widget');
       const loader = document.getElementById('widget-loader');
-
-      if (window.MyWidget && typeof MyWidget.initWidget === 'function') {
+         
         MyWidget.initWidget(container, {
-          // Puedes añadir opciones si el widget las soporta
-          onReady: function () {
+         centroeducativo:"Instituto de Ciencias y Letras",
+          tema: "blanco",
+          nombreia: "IA ICL"          onReady: function () {
             if (loader) loader.style.display = 'none';
           }
         });
@@ -88,11 +88,12 @@
 </head>
 
 <body>
-  <header>
+<header>
     <div class="header-content">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png" alt="Logo" class="logo" />
       <div>
-        <h1>Web demo</h1>
+        <h1>Instituto de Cifras y Letras</h1>
+        <p>Formando el futuro desde 1950</p>
       </div>
     </div>
   </header>
