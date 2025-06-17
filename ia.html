@@ -70,21 +70,13 @@
         MyWidget.initWidget(container, {
          centroeducativo:"Instituto de Ciencias y Letras",
           tema: "blanco",
-          nombreia: "IA ICL" ,
+          nombre: "ICL" ,
           onReady: function () {
             if (loader) loader.style.display = 'none';
           }
         });
 
-            MyWidget.initWidget(container, {
-        centroeducativo: "dark",
-        tema: "blanco",
-        nombreia: "es",
-        onReady: function () {
-          if (loader) loader.style.display = 'none';
-        }
-      });
-
+ 
         // Fallback por si no hay onReady
         setTimeout(() => {
           if (loader) loader.style.display = 'none';
