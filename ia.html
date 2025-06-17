@@ -76,6 +76,15 @@
           }
         });
 
+            MyWidget.initWidget(container, {
+        centroeducativo: "dark",
+        tema: "blanco",
+        nombreia: "es",
+        onReady: function () {
+          if (loader) loader.style.display = 'none';
+        }
+      });
+
         // Fallback por si no hay onReady
         setTimeout(() => {
           if (loader) loader.style.display = 'none';
