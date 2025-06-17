@@ -57,36 +57,36 @@
     }
   </style>
 
-  <!-- Scripts (defer para que no bloqueen el render) -->
-  <script src="https://unpkg.com/react@18/umd/react.production.min.js" defer></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" defer></script>
-  <script src="https://widget-snowy.vercel.app/widget.umd.js" defer></script>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js" defer></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" defer></script>
+<script src="https://widget-snowy.vercel.app/widget.umd.js" defer></script>
 
-  <script defer>
-    document.addEventListener("DOMContentLoaded", function () {
-      const container = document.getElementById('mi-widget');
-      const loader = document.getElementById('widget-loader');
-         
-        MyWidget.initWidget(container, {
-         centroeducativo:"Instituto de Ciencias y Letras",
-          tema: "blanco",
-          nombre: "ICL" ,
-          onReady: function () {
-            if (loader) loader.style.display = 'none';
-          }
-        });
+<script defer>
+  document.addEventListener("DOMContentLoaded", function () {
+    const container = document.getElementById('mi-widget');
+    const loader = document.getElementById('widget-loader');
 
- 
-        // Fallback por si no hay onReady
-        setTimeout(() => {
+    if (window.MyWidget && typeof MyWidget.initWidget === 'function') {
+      MyWidget.initWidget(container, {
+       centroeducativo:"Instituto de Ciencias y Letras",
+        tema: "blanco",
+        nombre: "ICL" ,
+        onReady: function () {
           if (loader) loader.style.display = 'none';
-        }, 3000);
-      } else {
-        console.error("❌ MyWidget o initWidget no está disponible");
-        if (loader) loader.innerHTML = "<p style='color:red;'>Error al cargar el widget</p>";
-      }
-    });
-  </script>
+        }
+      });
+
+      // Fallback por si onReady no funciona
+      setTimeout(() => {
+        if (loader) loader.style.display = 'none';
+      }, 3000);
+    } else {
+      console.error("❌ MyWidget o initWidget no está disponible");
+      if (loader) loader.innerHTML = "<p style='color:red;'>Error al cargar el widget</p>";
+    }
+  });
+</script>
+
 </head>
 
 <body>
@@ -104,7 +104,7 @@
   <div id="mi-widget">
     <div id="widget-loader" class="spinner-container">
       <div class="spinner"></div>
-      <p>Cargando widget...</p>
+      <p>Cargando widget...1</p>
     </div>
   </div>
 </body>
