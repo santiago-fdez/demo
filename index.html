@@ -2,14 +2,76 @@
 <html>
 <head>
   <meta charset="UTF-8" />
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"/>
-  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-  <script src="https://widget-snowy.vercel.app/widget.umd.js"></script>
+  <title>Web del Centro</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Merriweather', serif;
+      background-color: #f7f9fb;
+      color: #1f2d3d;
+    }
+
+    header {
+      background-color: #e6ecf1;
+      color: #1f2d3d;
+      padding: 5px;
+      border-bottom: 2px solid #c5d3e0;
+    }
+
+    .header-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .logo {
+      max-height: 30px;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    header p {
+      margin: 4px 0 0;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    main {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    main h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    main p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: #e6ecf1;
+      text-align: center;
+      padding: 10px;
+      font-size: 0.9rem;
+      color: #555;
+      border-top: 1px solid #c5d3e0;
+    }
+  </style>
 </head>
 <body>
 
@@ -17,19 +79,26 @@
     <div class="header-content">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png" alt="Logo" class="logo" />
       <div>
-        <h1>Web demo</h1>
+        <h1>Instituto de Cifras y Letras</h1>
+        <p>Formando el futuro desde 1950</p>
       </div>
     </div>
   </header>
-  <div id="mi-widget"></div>
-  <script>
-    window.onload = () => {
-      if (window.MyWidget && typeof MyWidget.initWidget === 'function') {
-        MyWidget.initWidget(document.getElementById('mi-widget'), {
-      } else {
-        console.error("❌ MyWidget o initWidget no está disponible");
-      }
-    };
-  </script>
+
+  <main>
+    <h2>Bienvenidos a Nuestra Institución</h2>
+    <p>
+      En el Instituto de Cifras y Letras estamos comprometidos con la excelencia académica y la formación integral de nuestros estudiantes. Nuestro enfoque combina tradición educativa con innovación, preparando a las nuevas generaciones para los retos del mañana.
+    </p>
+    <p>
+      <br>
+<a href="https://santiago-fdez.github.io/demo/ia.html">Accede a nuestro Agente IA de Matemáticas</a>
+  </p>
+  </main>
+
+  <footer>
+    © 2025 Instituto de Cifras y Letras · Todos los derechos reservados
+  </footer>
+
 </body>
 </html>
