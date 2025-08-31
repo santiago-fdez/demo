@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Web demo con Widget</title>
+  <title>Web con Widget</title>
 
   <!-- Estilos -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" />
@@ -67,9 +67,10 @@
 
     if (window.MyWidget && typeof MyWidget.initWidget === 'function') {
       MyWidget.initWidget(container, {
-       centroeducativo:"Instituto de Ciencias y Letras",
-        tema: "blanco",
-        nombreia: "ICL" ,
+        centroeducativo:"IES Fernando de Herrera",
+          tema: "blanco",
+          nombreavatar:"Mi IA",
+          urlavatar: "https://matematicas.edubit.es/matias.png"
         onReady: function () {
           if (loader) loader.style.display = 'none';
         }
@@ -89,16 +90,6 @@
 </head>
 
 <body>
-<header>
-    <div class="header-content">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png" alt="Logo" class="logo" />
-      <div>
-        <h1>Instituto de Cifras y Letras</h1>
-        <p>Formando el futuro desde 1950</p>
-      </div>
-    </div>
-  </header>
-
   <!-- Contenedor del widget + loader -->
   <div id="mi-widget">
     <div id="widget-loader" class="spinner-container">
