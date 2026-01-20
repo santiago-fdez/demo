@@ -21,11 +21,11 @@
 <body>
 
   <header>
-  <div id="widgetQuantEd"></div>
+  <div id="widget"></div>
   <script>
     window.onload = () => {
       if (window.MyWidget && typeof MyWidget.initWidget === 'function') {
-        MyWidget.initWidget(document.getElementById('widgetQuantEd'), {
+        MyWidget.initWidget(document.getElementById('widget'), {
           datosCentro: {nombre:"IES Fernando de Herrera",color_primario:'#004488',color_secundario:'#478045'},
         });
       } else {
